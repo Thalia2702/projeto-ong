@@ -1,0 +1,1006 @@
+/* =========================================
+   PROJETO ONG
+   DESIGN SYSTEM COMPLETO
+========================================= */
+
+
+/* =========================================
+   1. VARIÁVEIS DO DESIGN SYSTEM
+========================================= */
+
+:root {
+
+    --cor-primaria: #2e7d5b;
+    --cor-primaria-escura: #256348;
+
+    --cor-destaque: #f2c94c;
+
+    --cor-secundaria: #e8f5ee;
+    --cor-fundo: #f2f8f5;
+
+    --cor-branco: #ffffff;
+
+    --cor-texto: #333333;
+    --cor-cinza: #666666;
+
+    --cor-erro: #c62828;
+    --cor-alerta: #9c6500;
+
+    --fonte-pequena: 14px;
+    --fonte-normal: 16px;
+    --fonte-media: 18px;
+
+    --fonte-titulo: 24px;
+    --fonte-grande: 32px;
+
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+    --espaco-5: 32px;
+}
+
+
+/* =========================================
+   2. CONFIGURAÇÃO GERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--cor-fundo);
+
+    color: var(--cor-texto);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   3. CONTAINER
+========================================= */
+
+.container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 var(--espaco-3);
+}
+
+
+/* =========================================
+   4. CABEÇALHO
+========================================= */
+
+header {
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branco);
+
+    padding: var(--espaco-3);
+}
+
+header .container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: var(--espaco-3);
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: var(--fonte-grande);
+}
+
+
+/* =========================================
+   5. MENU
+========================================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: var(--espaco-3);
+
+    flex-wrap: wrap;
+}
+
+nav a {
+
+    color: var(--cor-branco);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: var(--espaco-2);
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+
+    background-color: var(--cor-primaria-escura);
+}
+
+nav a:focus {
+
+    outline: 3px solid var(--cor-destaque);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   6. BOTÃO DO MENU HAMBÚRGUER
+========================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    background-color: transparent;
+
+    border: 2px solid var(--cor-branco);
+
+    color: var(--cor-branco);
+
+    font-size: 24px;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   7. CONTEÚDO PRINCIPAL
+========================================= */
+
+main {
+
+    max-width: 1100px;
+
+    margin: var(--espaco-5) auto;
+
+    padding: 0 var(--espaco-3);
+}
+
+
+/* =========================================
+   8. SEÇÕES
+========================================= */
+
+section {
+
+    background-color: var(--cor-branco);
+
+    padding: var(--espaco-4);
+
+    margin-bottom: var(--espaco-4);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   9. HERO
+========================================= */
+
+.hero {
+
+    text-align: center;
+}
+
+.hero h2 {
+
+    font-size: var(--fonte-grande);
+}
+
+
+/* =========================================
+   10. TÍTULOS
+========================================= */
+
+h2,
+h3 {
+
+    color: var(--cor-primaria);
+}
+
+
+/* =========================================
+   11. GRID DE 12 COLUNAS
+========================================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: var(--espaco-3);
+}
+
+
+/* =========================================
+   12. CARDS
+========================================= */
+
+.card {
+
+    grid-column: span 4;
+
+    background-color: var(--cor-secundaria);
+
+    padding: var(--espaco-3);
+
+    border-radius: 8px;
+
+    border-left: 5px solid var(--cor-primaria);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   13. BOTÕES
+========================================= */
+
+.botao,
+button {
+
+    display: inline-block;
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branco);
+
+    border: none;
+
+    padding:
+        var(--espaco-2)
+        var(--espaco-3);
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+
+/* HOVER */
+
+.botao:hover,
+button:hover:not(:disabled) {
+
+    background-color: var(--cor-primaria-escura);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ACTIVE */
+
+.botao:active,
+button:active:not(:disabled) {
+
+    transform: translateY(0);
+}
+
+
+/* FOCUS */
+
+.botao:focus,
+button:focus {
+
+    outline: 3px solid var(--cor-destaque);
+
+    outline-offset: 3px;
+}
+
+
+/* DISABLED */
+
+button:disabled {
+
+    background-color: #aaaaaa;
+
+    color: #eeeeee;
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   14. BOTÃO SECUNDÁRIO
+========================================= */
+
+.botao-secundario {
+
+    background-color:
+        var(--cor-primaria-escura);
+}
+
+
+/* =========================================
+   15. NÚMEROS / FLEXBOX
+========================================= */
+
+.numeros {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    gap: var(--espaco-3);
+
+    text-align: center;
+
+    background-color:
+        var(--cor-secundaria);
+}
+
+.numeros div {
+
+    flex: 1;
+}
+
+
+/* =========================================
+   16. BADGES
+========================================= */
+
+.badge {
+
+    display: inline-block;
+
+    padding:
+        var(--espaco-1)
+        var(--espaco-2);
+
+    border-radius: 20px;
+
+    font-size: var(--fonte-pequena);
+
+    font-weight: bold;
+}
+
+.badge-sucesso {
+
+    background-color:
+        var(--cor-primaria);
+
+    color:
+        var(--cor-branco);
+}
+
+
+/* =========================================
+   17. ALERTAS
+========================================= */
+
+.alerta {
+
+    padding: var(--espaco-3);
+
+    margin-bottom: var(--espaco-3);
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    border-left: 5px solid;
+}
+
+.alerta-sucesso {
+
+    background-color:
+        var(--cor-secundaria);
+
+    color:
+        var(--cor-primaria-escura);
+
+    border-color:
+        var(--cor-primaria);
+}
+
+.alerta-atencao {
+
+    background-color: #fff5d6;
+
+    color: var(--cor-alerta);
+
+    border-color:
+        var(--cor-destaque);
+}
+
+.alerta-erro {
+
+    background-color: #fde8e8;
+
+    color: var(--cor-erro);
+
+    border-color:
+        var(--cor-erro);
+}
+
+
+/* =========================================
+   18. FORMULÁRIO
+========================================= */
+
+form {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.campo {
+
+    margin-bottom: var(--espaco-3);
+}
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: var(--espaco-2);
+}
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: var(--espaco-2);
+
+    border: 2px solid #cccccc;
+
+    border-radius: 6px;
+
+    font-size: var(--fonte-normal);
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* FOCUS DO FORMULÁRIO */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color:
+        var(--cor-primaria);
+
+    outline:
+        3px solid var(--cor-destaque);
+}
+
+
+/* CAMPO VÁLIDO */
+
+input:valid,
+select:valid {
+
+    border-color:
+        var(--cor-primaria);
+}
+
+
+/* CAMPO INVÁLIDO */
+
+input:invalid:not(:placeholder-shown) {
+
+    border-color:
+        var(--cor-erro);
+}
+
+
+/* MENSAGEM DE ERRO */
+
+.mensagem-erro {
+
+    display: none;
+
+    color:
+        var(--cor-erro);
+
+    font-size:
+        var(--fonte-pequena);
+}
+
+input:invalid:not(:placeholder-shown)
++ .mensagem-erro {
+
+    display: block;
+}
+
+
+/* =========================================
+   19. ÁREA DE CHAMADA
+========================================= */
+
+.chamada {
+
+    text-align: center;
+}
+
+.chamada .botao,
+.chamada button {
+
+    margin: 5px;
+}
+
+
+/* =========================================
+   20. TOAST / NOTIFICAÇÃO
+========================================= */
+
+/*
+   A notificação fica exatamente
+   no centro da tela.
+*/
+
+.toast {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background-color:
+        var(--cor-primaria);
+
+    color:
+        var(--cor-branco);
+
+    padding: 20px 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    text-align: center;
+
+    min-width: 260px;
+
+    max-width: 90%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 1000;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/*
+   Quando o JavaScript adiciona
+   a classe "ativo", a notificação aparece.
+*/
+
+.toast.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   21. MODAL
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color:
+        rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s,
+        visibility 0.3s;
+
+    z-index: 999;
+}
+
+
+/* MODAL ABERTO */
+
+.modal.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* CONTEÚDO DO MODAL */
+
+.modal-conteudo {
+
+    position: relative;
+
+    max-width: 500px;
+
+    width: 90%;
+
+    background-color:
+        var(--cor-branco);
+
+    padding: var(--espaco-5);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* BOTÃO FECHAR */
+
+.fechar-modal {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 15px;
+
+    background: none;
+
+    color: var(--cor-texto);
+
+    font-size: 25px;
+
+    padding: 5px 10px;
+}
+
+.fechar-modal:hover {
+
+    background: none;
+
+    color: var(--cor-erro);
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   22. RODAPÉ
+========================================= */
+
+footer {
+
+    background-color:
+        var(--cor-primaria);
+
+    color:
+        var(--cor-branco);
+
+    text-align: center;
+
+    padding:
+        var(--espaco-3);
+}
+
+
+/* =========================================
+   23. BOTÕES EM GRUPO
+========================================= */
+
+.botoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: var(--espaco-2);
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   24. BREAKPOINT 1
+   Até 1200px
+========================================= */
+
+@media (max-width: 1200px) {
+
+    main {
+
+        max-width: 1000px;
+    }
+
+}
+
+
+/* =========================================
+   25. BREAKPOINT 2
+   Até 992px
+========================================= */
+
+@media (max-width: 992px) {
+
+    .card {
+
+        grid-column: span 6;
+    }
+
+    header h1 {
+
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================
+   26. BREAKPOINT 3
+   Até 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    header .container {
+
+        flex-wrap: wrap;
+    }
+
+    nav {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero h2 {
+
+        font-size:
+            var(--fonte-titulo);
+    }
+
+    .card {
+
+        grid-column: span 6;
+    }
+
+}
+
+
+/* =========================================
+   27. BREAKPOINT 4
+   Até 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* MENU HAMBÚRGUER */
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    /* MENU ESCONDIDO */
+
+    nav {
+
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        align-items: stretch;
+
+        text-align: center;
+    }
+
+
+    /* MENU ABERTO */
+
+    nav.ativo {
+
+        display: flex;
+    }
+
+
+    nav a {
+
+        width: 100%;
+    }
+
+
+    /* GRID */
+
+    .card {
+
+        grid-column: span 12;
+    }
+
+
+    /* NÚMEROS */
+
+    .numeros {
+
+        flex-direction: column;
+    }
+
+    .numeros div {
+
+        width: 100%;
+    }
+
+
+    /* BOTÕES */
+
+    .botoes {
+
+        flex-direction: column;
+    }
+
+    .botoes .botao,
+    .botoes button {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   28. BREAKPOINT 5
+   Até 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    header h1 {
+
+        font-size:
+            var(--fonte-titulo);
+    }
+
+    main {
+
+        padding:
+            0 var(--espaco-2);
+    }
+
+    section {
+
+        padding:
+            var(--espaco-3);
+    }
+
+    .hero h2 {
+
+        font-size: 22px;
+    }
+
+    p {
+
+        font-size:
+            var(--fonte-normal);
+    }
+
+    .toast {
+
+        min-width: 220px;
+
+        padding:
+            16px 20px;
+    }
+
+}

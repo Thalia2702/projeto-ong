@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Conheça os projetos sociais desenvolvidos pelo Projeto ONG.">
+
+    <title>Projetos - Projeto ONG</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="container">
+
+            <h1>💚 Projeto ONG</h1>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <nav id="menu" aria-label="Menu principal">
+
+                <a href="index.html">🏠 Início</a>
+
+                <a href="projetos.html">🌱 Projetos</a>
+
+                <a href="cadastro.html">🤝 Seja voluntário</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+
+            <h2>🌱 Nossos Projetos</h2>
+
+            <p>
+                Conheça nossas iniciativas e descubra como
+                pequenas atitudes podem transformar vidas. 💚
+            </p>
+
+        </section>
+
+
+        <!-- PROJETOS -->
+        <section>
+
+            <h2>💚 Projetos que fazem a diferença</h2>
+
+            <div class="cards">
+
+                <article class="card card-projeto">
+
+                    <h3>🍎 Alimentação Solidária</h3>
+
+                    <p>
+                        Arrecadamos e distribuímos alimentos
+                        para famílias que precisam de apoio.
+                    </p>
+
+                    <span class="badge badge-sucesso">
+                        ✅ Projeto ativo
+                    </span>
+
+                </article>
+
+
+                <article class="card card-projeto">
+
+                    <h3>📚 Educação para Todos</h3>
+
+                    <p>
+                        Desenvolvemos ações de apoio educacional
+                        para incentivar crianças e jovens nos estudos.
+                    </p>
+
+                    <span class="badge badge-sucesso">
+                        ✅ Projeto ativo
+                    </span>
+
+                </article>
+
+
+                <article class="card card-projeto">
+
+                    <h3>🤝 Campanha de Solidariedade</h3>
+
+                    <p>
+                        Arrecadamos roupas, materiais e itens
+                        essenciais para pessoas em situação de necessidade.
+                    </p>
+
+                    <span class="badge badge-sucesso">
+                        ✅ Projeto ativo
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMO FUNCIONA -->
+        <section>
+
+            <h2>📊 Como nossos projetos funcionam?</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🎯 Objetivo</h3>
+
+                    <p>
+                        Identificar necessidades da comunidade
+                        e desenvolver ações que contribuam
+                        para melhorar a qualidade de vida.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🤝 Participação</h3>
+
+                    <p>
+                        Voluntários podem contribuir com tempo,
+                        conhecimentos, doações e participação
+                        nas atividades.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🌎 Impacto</h3>
+
+                    <p>
+                        As ações buscam alcançar pessoas que
+                        precisam de apoio e fortalecer a
+                        solidariedade na comunidade.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMAÇÕES IMPORTANTES -->
+        <section>
+
+            <h2>🔔 Informações importantes</h2>
+
+            <div class="alerta alerta-sucesso">
+                ✅ Os projetos estão ativos e recebendo
+                participação de voluntários.
+            </div>
+
+            <div class="alerta alerta-atencao">
+                ⚠️ Algumas ações precisam de novas doações
+                para continuar.
+            </div>
+
+            <div class="alerta alerta-erro">
+                ❌ Exemplo de alerta para situações que
+                precisam de atenção.
+            </div>
+
+        </section>
+
+
+        <!-- NOTIFICAÇÃO -->
+        <section class="chamada">
+
+            <h2>🔔 Notificação do sistema</h2>
+
+            <p>
+                Clique no botão para visualizar uma
+                confirmação rápida.
+            </p>
+
+            <button
+                type="button"
+                class="botao"
+                id="mostrarToast">
+
+                🔔 Mostrar notificação
+
+            </button>
+
+        </section>
+
+
+        <!-- PARTICIPAÇÃO -->
+        <section class="chamada">
+
+            <h2>🙋 Quer fazer parte dessa mudança?</h2>
+
+            <p>
+                Seu tempo, suas habilidades e sua vontade
+                de ajudar podem fazer a diferença. 🌎💚
+            </p>
+
+
+            <a
+                href="cadastro.html"
+                class="botao">
+
+                🤝 Fazer meu cadastro
+
+            </a>
+
+
+            <button
+                type="button"
+                class="botao"
+                id="abrirModal">
+
+                💚 Saiba como participar
+
+            </button>
+
+
+            <button
+                type="button"
+                disabled>
+
+                🚫 Exemplo de botão desabilitado
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- TOAST -->
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite">
+
+        <strong>✅ Sucesso!</strong>
+
+        <span>
+            Sua ação foi realizada.
+        </span>
+
+    </div>
+
+
+    <!-- MODAL -->
+
+    <div
+        id="modal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloModal">
+
+        <div class="modal-conteudo">
+
+            <button
+                type="button"
+                class="fechar-modal"
+                id="fecharModal"
+                aria-label="Fechar janela">
+
+                ×
+
+            </button>
+
+
+            <h2 id="tituloModal">
+                💚 Faça parte do Projeto ONG
+            </h2>
+
+
+            <p>
+                Você pode participar como voluntário
+                ajudando nas nossas ações sociais.
+            </p>
+
+
+            <a
+                href="cadastro.html"
+                class="botao">
+
+                🤝 Ir para o cadastro
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            💚 Projeto ONG - Juntos fazemos a diferença
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // MENU
+        const menuToggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+
+        if (menuToggle && menu) {
+
+            menuToggle.addEventListener("click", function () {
+
+                menu.classList.toggle("ativo");
+
+            });
+
+        }
+
+
+        // NOTIFICAÇÃO
+        const botaoToast = document.getElementById("mostrarToast");
+        const toast = document.getElementById("toast");
+
+        if (botaoToast && toast) {
+
+            botaoToast.addEventListener("click", function () {
+
+                toast.classList.add("ativo");
+
+                setTimeout(function () {
+
+                    toast.classList.remove("ativo");
+
+                }, 3000);
+
+            });
+
+        }
+
+
+        // MODAL
+        const botaoModal = document.getElementById("abrirModal");
+        const fecharModal = document.getElementById("fecharModal");
+        const modal = document.getElementById("modal");
+
+
+        if (botaoModal && modal) {
+
+            botaoModal.addEventListener("click", function () {
+
+                modal.classList.add("ativo");
+
+            });
+
+        }
+
+
+        if (fecharModal && modal) {
+
+            fecharModal.addEventListener("click", function () {
+
+                modal.classList.remove("ativo");
+
+            });
+
+        }
+
+
+        if (modal) {
+
+            modal.addEventListener("click", function (evento) {
+
+                if (evento.target === modal) {
+
+                    modal.classList.remove("ativo");
+
+                }
+
+            });
+
+        }
+
+
+        // FECHAR MODAL COM ESC
+        document.addEventListener("keydown", function (evento) {
+
+            if (evento.key === "Escape" && modal) {
+
+                modal.classList.remove("ativo");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

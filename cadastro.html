@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Faça seu cadastro para ser voluntário do Projeto ONG.">
+
+    <title>Cadastro - Projeto ONG</title>
+
+    <!-- CSS está na pasta css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <h1>💚 Projeto ONG</h1>
+
+
+            <!-- MENU HAMBÚRGUER -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menu">
+
+                ☰
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <nav
+                id="menu"
+                aria-label="Menu principal">
+
+                <a href="index.html">
+                    🏠 Início
+                </a>
+
+                <a href="projetos.html">
+                    🌱 Projetos
+                </a>
+
+                <a href="cadastro.html">
+                    🤝 Seja voluntário
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
+    <main>
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="hero">
+
+            <h2>
+                🤝 Quero ser voluntário
+            </h2>
+
+            <p>
+                Preencha o formulário abaixo para fazer
+                parte das nossas ações e ajudar a
+                transformar vidas. 💚
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             FORMULÁRIO
+        ========================================== -->
+
+        <section>
+
+            <h2>
+                📝 Cadastro de voluntário
+            </h2>
+
+            <p>
+                Conte um pouco sobre você e escolha
+                como gostaria de contribuir.
+            </p>
+
+
+            <form id="formulario">
+
+
+                <!-- NOME -->
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required
+                        autocomplete="name">
+
+                    <small class="mensagem-erro">
+                        Informe seu nome completo.
+                    </small>
+
+                </div>
+
+
+                <!-- E-MAIL -->
+
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="exemplo@email.com"
+                        required
+                        autocomplete="email">
+
+                    <small class="mensagem-erro">
+                        Informe um e-mail válido.
+                    </small>
+
+                </div>
+
+
+                <!-- TELEFONE -->
+
+                <div class="campo">
+
+                    <label for="telefone">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        autocomplete="tel">
+
+                </div>
+
+
+                <!-- CEP -->
+
+                <div class="campo">
+
+                    <label for="cep">
+                        CEP
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        maxlength="9"
+                        placeholder="00000-000"
+                        inputmode="numeric"
+                        autocomplete="postal-code">
+
+                </div>
+
+
+                <!-- ÁREA DE INTERESSE -->
+
+                <div class="campo">
+
+                    <label for="area">
+                        Área de interesse
+                    </label>
+
+                    <select
+                        id="area"
+                        name="area"
+                        required>
+
+                        <option value="">
+                            Selecione uma área
+                        </option>
+
+                        <option value="alimentacao">
+                            🍎 Alimentação
+                        </option>
+
+                        <option value="educacao">
+                            📚 Educação
+                        </option>
+
+                        <option value="solidariedade">
+                            🤝 Solidariedade
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MENSAGEM -->
+
+                <div class="campo">
+
+                    <label for="mensagem">
+                        Por que deseja ser voluntário?
+                    </label>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        rows="6"
+                        placeholder="Conte um pouco sobre você e como gostaria de ajudar."></textarea>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="botoes">
+
+                    <button
+                        type="submit"
+                        class="botao">
+
+                        🤝 Quero ser voluntário
+
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="botao-secundario">
+
+                        🔄 Limpar formulário
+
+                    </button>
+
+                </div>
+
+
+                <!-- MENSAGEM DE SUCESSO -->
+
+                <div
+                    id="mensagemSucesso"
+                    class="alerta alerta-sucesso"
+                    role="status"
+                    aria-live="polite"
+                    style="display: none; margin-top: 20px;">
+
+                    ✅ Cadastro realizado com sucesso!
+
+                    <br>
+
+                    Obrigado por querer fazer parte
+                    do Projeto ONG. 💚
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================================
+             POR QUE SER VOLUNTÁRIO?
+        ========================================== -->
+
+        <section>
+
+            <h2>
+                💚 Por que ser voluntário?
+            </h2>
+
+            <div class="cards">
+
+
+                <article class="card">
+
+                    <h3>
+                        🤝 Ajude pessoas
+                    </h3>
+
+                    <p>
+                        Contribua com ações que ajudam
+                        pessoas e famílias da comunidade.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        🌱 Desenvolva habilidades
+                    </h3>
+
+                    <p>
+                        Compartilhe seus conhecimentos,
+                        aprenda e desenvolva novas
+                        experiências.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        💚 Faça a diferença
+                    </h3>
+
+                    <p>
+                        Pequenas atitudes podem gerar
+                        grandes mudanças na sociedade.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            💚 Projeto ONG - Juntos fazemos a diferença
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        // MENU HAMBÚRGUER
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const menu =
+            document.getElementById("menu");
+
+
+        if (menuToggle && menu) {
+
+            menuToggle.addEventListener(
+                "click",
+                function () {
+
+                    menu.classList.toggle("ativo");
+
+                }
+            );
+
+        }
+
+
+        // MÁSCARA DE CEP
+
+        const cep =
+            document.getElementById("cep");
+
+
+        if (cep) {
+
+            cep.addEventListener(
+                "input",
+                function () {
+
+                    let valor =
+                        cep.value.replace(/\D/g, "");
+
+                    valor =
+                        valor.replace(
+                            /^(\d{5})(\d)/,
+                            "$1-$2"
+                        );
+
+                    cep.value =
+                        valor.substring(0, 9);
+
+                }
+            );
+
+        }
+
+
+        // MÁSCARA DE TELEFONE
+
+        const telefone =
+            document.getElementById("telefone");
+
+
+        if (telefone) {
+
+            telefone.addEventListener(
+                "input",
+                function () {
+
+                    let valor =
+                        telefone.value.replace(/\D/g, "");
+
+
+                    if (valor.length <= 10) {
+
+                        valor =
+                            valor.replace(
+                                /^(\d{2})(\d)/,
+                                "($1) $2"
+                            );
+
+                        valor =
+                            valor.replace(
+                                /(\d{4})(\d)/,
+                                "$1-$2"
+                            );
+
+                    } else {
+
+                        valor =
+                            valor.replace(
+                                /^(\d{2})(\d)/,
+                                "($1) $2"
+                            );
+
+                        valor =
+                            valor.replace(
+                                /(\d{5})(\d)/,
+                                "$1-$2"
+                            );
+
+                    }
+
+
+                    telefone.value =
+                        valor.substring(0, 15);
+
+                }
+            );
+
+        }
+
+
+        // FORMULÁRIO
+
+        const formulario =
+            document.getElementById("formulario");
+
+        const mensagemSucesso =
+            document.getElementById("mensagemSucesso");
+
+
+        if (formulario) {
+
+            formulario.addEventListener(
+                "submit",
+                function (evento) {
+
+                    evento.preventDefault();
+
+
+                    if (formulario.checkValidity()) {
+
+                        mensagemSucesso.style.display =
+                            "block";
+
+                        formulario.reset();
+
+                    } else {
+
+                        formulario.reportValidity();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        // ESCONDER SUCESSO AO COMEÇAR NOVO CADASTRO
+
+        if (formulario && mensagemSucesso) {
+
+            formulario.addEventListener(
+                "input",
+                function () {
+
+                    mensagemSucesso.style.display =
+                        "none";
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
